@@ -1,0 +1,9 @@
+<div class="user-container">
+    <img (click)="onImgClick()" src="../../assets/imgs/us{{ user.imgUrl }}.webp"  [ngClass]="{ clicked: clicked == true }" [alt]="user.name">
+    <div class="text-content">
+        <p class="nom">{{ user.name }}</p>
+        <p class="prenom">{{ user.firstname }}</p>
+        <p class="description">{{ user.description }}</p>
+        <a routerLink="/show-users-list">Retour</a>
+    </div>
+</div>

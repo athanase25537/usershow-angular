@@ -1,0 +1,48 @@
+.user-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 3%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+     }
+
+    img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .img {
+        position: relative;
+        .onlineStatus {
+            position: absolute;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: green;
+        }
+    }
+    
+    .text-content {
+        p.nom {
+            text-transform: uppercase;
+        }
+    
+        p.prenom {
+            color: var(--main);
+            font-size: small;
+            text-transform: capitalize;
+        }
+
+        p.description {
+            margin-top: 5px;
+            color: var(--secondary)
+        }
+    }
+}

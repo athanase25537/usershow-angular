@@ -1,0 +1,11 @@
+<div class="user-container" (click)="onShow()">
+    <div class="img">
+        <div *ngIf="user.onlineStatus" class="onlineStatus"></div>
+        <img src="../../assets/imgs/us{{ user.imgUrl }}.webp" [alt]="user.name">
+    </div>
+    <div class="text-content">
+        <p class="nom">{{ user.name }}</p>
+        <p class="prenom">{{ user.firstname }}</p>
+        <p class="description">{{ user.description }}</p>
+    </div>
+</div>

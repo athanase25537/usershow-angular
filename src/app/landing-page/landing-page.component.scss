@@ -1,0 +1,59 @@
+.main {
+    width: 100%;
+    padding: 0 3%;
+    margin: 3% auto;
+
+    h1,
+    p,
+    img,
+    button {
+        margin-bottom: 2%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        color: var(--main);
+        text-transform: capitalize;
+    }
+    
+    p {
+        text-align: justify;
+    }
+    
+    button {
+        padding: 5px 10px;
+        color: var(--main);
+        border: 1px solid var(--main);
+        background: none;
+        position: relative;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
+        &::before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 0%;
+            height: 100%;
+            background-color: var(--main);
+            top: 0;
+            left: 0;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+}
